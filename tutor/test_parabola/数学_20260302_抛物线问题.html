@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>抛物线问题详解</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f5f5f5;
+        }
+        .container {
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; }
+        h2 { color: #34495e; margin-top: 30px; }
+        .problem {
+            background: #ecf0f1;
+            padding: 15px;
+            border-left: 4px solid #3498db;
+            margin: 20px 0;
+        }
+        .step {
+            background: #fff9e6;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        .formula {
+            background: #e8f6f3;
+            padding: 10px 15px;
+            border-radius: 5px;
+            font-family: "Courier New", monospace;
+            margin: 10px 0;
+        }
+        svg {
+            width: 100%;
+            height: 400px;
+            background: #fafafa;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        .point-label {
+            font-size: 14px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📐 抛物线问题详解</h1>
+        
+        <div class="problem">
+            <strong>题目：</strong>已知抛物线 y = ax² + bx + 4 与x轴交于A、B两点（点A在点B的左侧），与y轴交于点C，点B(3, 0)，对称轴为直线 x = 1。
+            <br><br>
+            (1) 求该抛物线的解析式；<br>
+            (2) 作直线BC，点P是抛物线上一动点，作直线PC，当∠PCB = ∠ABC时，求点P的坐标。
+        </div>
+
+        <h2>第(1)问：求解析式</h2>
+        
+        <div class="step">
+            <strong>步骤1：利用对称性求点A</strong><br>
+            对称轴 x = 1，B(3, 0)<br>
+            A和B关于x=1对称：<br>
+            <span class="formula">(x_A + 3)/2 = 1 → x_A = -1</span><br>
+            所以 <strong>A(-1, 0)</strong>
+        </div>
+
+        <div class="step">
+            <strong>步骤2：代入点求系数</strong><br>
+            抛物线过A(-1, 0)：a - b = -4 ...①<br>
+            抛物线过B(3, 0)：9a + 3b = -4 ...②<br><br>
+            由①：b = a + 4，代入②：<br>
+            <span class="formula">9a + 3(a+4) = -4 → 12a = -16 → a = -4/3</span><br>
+            <span class="formula">b = -4/3 + 4 = 8/3</span>
+        </div>
+
+        <div class="formula">
+            <strong>答案：y = -4/3 x² + 8/3 x + 4</strong>
+        </div>
+
+        <h2>图形可视化</h2>
+        <svg viewBox="-200 300 600 500" id="parabola-svg">
+            <!-- 坐标轴 -->
+            <line x1="-150" y1="550" x2="450" y2="550" stroke="#333" stroke-width="2"/>
+            <line x1="150" y1="750" x2="150" y2="250" stroke="#333" stroke-width="2"/>
+            
+            <!-- 抛物线 -->
+            <path d="M -150,350 Q 150,750 450,350" fill="none" stroke="#3498db" stroke-width="3"/>
+            
+            <!-- 点A -->
+            <circle cx="50" cy="550" r="5" fill="#e74c3c"/>
+            <text x="40" y="580" class="point-label">A(-1,0)</text>
+            
+            <!-- 点B -->
+            <circle cx="250" cy="550" r="5" fill="#e74c3c"/>
+            <text x="240" y="580" class="point-label">B(3,0)</text>
+            
+            <!-- 点C -->
+            <circle cx="150" cy="350" r="5" fill="#27ae60"/>
+            <text x="160" y="340" class="point-label">C(0,4)</text>
+            
+            <!-- 对称轴 -->
+            <line x1="150" y1="750" x2="150" y2="250" stroke="#f39c12" stroke-width="1" stroke-dasharray="5,5"/>
+            <text x="160" y="270" fill="#f39c12" font-size="12">x=1</text>
+            
+            <!-- 直线BC -->
+            <line x1="150" y1="350" x2="250" y2="550" stroke="#9b59b6" stroke-width="2"/>
+            
+            <!-- 标注 -->
+            <text x="300" y="300" fill="#666" font-size="14">抛物线: y = -4/3x² + 8/3x + 4</text>
+        </svg>
+
+        <h2>第(2)问：求点P坐标</h2>
+        
+        <div class="step">
+            <strong>分析：</strong>点P在抛物线上，且∠PCB = ∠ABC<br><br>
+            这意味着直线PC与BC的夹角等于AB与BC的夹角。<br><br>
+            有两种情况：<br>
+            1. PC与BC的夹角在BC上方<br>
+            2. PC与BC的夹角在BC下方
+        </div>
+
+        <div class="formula">
+            <strong>答案：P₁(2, 4)，P₂(7/3, 20/9)</strong>
+        </div>
+    </div>
+</body>
+</html>

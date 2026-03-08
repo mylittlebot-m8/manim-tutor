@@ -1,0 +1,31 @@
+[Script Info]
+Title: 几何旋转综合题
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+Timer: 100.0000
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Default,Microsoft YaHei,32,&H00FFFFFF,&H000000FF,&H00000000,&H80000000,0,0,0,0,100,100,0,0,1,2,2,2,10,10,10,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:36.00,Default,,0,0,0,,在直角三角形 ABC 中，角 ACB 等于 90 度，AC 等于 4，BC 等于 3。点 D 是斜边 AB 上一动点，不与 A、B 重合，连接 CD，作三角形 CDE，使得角 CDE 等于 90 度，CD 等于 DE，连接 BE。第一问，求证角 ABE 等于 90 度。第二问，当 D 为 AB 中点时，求线段 BE 的长。第三问，在点 D 运动过程中，第一小问，求证 CE 的平方等于 2 乘以 BD 乘以 AD。第二小问，求 CE 的最小值。
+Dialogue: 0,0:00:36.00,0:01:01.84,Default,,0,0,0,,第一问，要证明角 ABE 等于 90 度。已知条件：角 ACB 等于 90 度，这是直角三角形 ABC。角 CDE 等于 90 度，CD 等于 DE，所以三角形 CDE 是等腰直角三角形。思路分析：观察图形，三角形 CDE 可以看作三角形 CDB 绕点 D 旋转 90 度得到。关键是证明三角形 ACD 全等于三角形 BED。
+Dialogue: 0,0:01:01.84,0:01:52.96,Default,,0,0,0,,证明：在三角形 ACD 和三角形 BED 中，CD 等于 DE，这是已知条件。角 ADC 等于角 BDE，这是对顶角相等。因为角 ACB 等于 90 度，角 CDE 等于 90 度，所以角 ACD 加角 BCD 等于 90 度，角 BDE 加角 CDE 等于 90 度。又因为角 BCD 等于角 CDE，这是旋转得到的，所以角 ACD 等于角 BDE。所以三角形 ACD 全等于三角形 BED，依据是边角边定理。所以角 CAD 等于角 EBD。因为角 CAD 加角 CBA 等于 90 度，这是直角三角形 ABC，所以角 EBD 加角 CBA 等于 90 度，即角 ABE 等于 90 度，得证。
+Dialogue: 0,0:01:52.96,0:02:21.52,Default,,0,0,0,,第二问，当 D 为 AB 中点时，求 BE 的长。已知条件：直角三角形 ABC，AC 等于 4，BC 等于 3，D 是 AB 中点，三角形 CDE 是等腰直角三角形。思路：第一步，先求 AB 的长，使用勾股定理。第二步，求 AD、BD 的长。第三步，利用第一问的全等结论，BE 等于 AC 等于 4。
+Dialogue: 0,0:02:21.52,0:03:03.60,Default,,0,0,0,,解：步骤一，求 AB 的长。在直角三角形 ABC 中，由勾股定理，AB 的平方等于 AC 的平方加 BC 的平方，等于 16 加 9 等于 25，所以 AB 等于 5。步骤二，求 AD、BD 的长。因为 D 是 AB 中点，所以 AD 等于 BD 等于 AB 除以 2 等于 2.5。步骤三，求 BE 的长。由第一问知，三角形 ACD 全等于三角形 BED，所以 BE 等于 AC 等于 4。答：当 D 为 AB 中点时，BE 等于 4。
+Dialogue: 0,0:03:03.60,0:03:32.16,Default,,0,0,0,,第三问第一小问，求证 CE 的平方等于 2 乘以 BD 乘以 AD。思路分析：在直角三角形 CDE 中，CD 等于 DE，角 CDE 等于 90 度，由勾股定理，CE 的平方等于 CD 的平方加 DE 的平方等于 2 乘以 CD 的平方。关键是证明 CD 的平方等于 BD 乘以 AD。证明方法是使用相似三角形，三角形 ACD 相似于三角形 CBD。
+Dialogue: 0,0:03:32.16,0:04:14.64,Default,,0,0,0,,证明：在直角三角形 CDE 中，CE 的平方等于 CD 的平方加 DE 的平方，这是勾股定理，等于 CD 的平方加 CD 的平方，因为 CD 等于 DE，等于 2 乘以 CD 的平方。证明 CD 的平方等于 BD 乘以 AD：在三角形 ACD 和三角形 CBD 中，角 A 等于角 BCD，这是同角的余角相等，角 ADC 等于角 CDB，这是公共角，所以三角形 ACD 相似于三角形 CBD，依据是角角定理。所以 AD 比 CD 等于 CD 比 BD，这是相似三角形对应边成比例，即 CD 的平方等于 BD 乘以 AD。所以 CE 的平方等于 2 乘以 CD 的平方等于 2 乘以 BD 乘以 AD，得证。
+Dialogue: 0,0:04:14.64,0:05:03.20,Default,,0,0,0,,第三问第二小问，求 CE 的最小值。由第一小问知，CE 的平方等于 2 乘以 BD 乘以 AD。设 AD 等于 x，则 BD 等于 5 减 x，因为 AB 等于 5。CE 的平方等于 2 乘以 5 减 x 乘以 x，等于 2 乘以 5x 减 x 的平方，等于负 2x 的平方加 10x。这是关于 x 的二次函数，开口向下，有最大值。当 x 等于负 b 除以 2a 等于负 10 除以负 4 等于 2.5 时，CE 的平方有最大值等于负 2 乘以 2.5 的平方加 10 乘以 2.5 等于 12.5。所以 CE 的最小值等于根号 12.5 等于 2 分之 5 倍根号 2。此时 D 为 AB 中点。
+Dialogue: 0,0:05:03.20,0:05:38.64,Default,,0,0,0,,答案汇总。第一问，证明三角形 ACD 全等于三角形 BED，依据是边角边定理，所以角 ABE 等于 90 度。第二问，BE 等于 4。第三问第一小问，证明 CE 的平方等于 2 乘以 BD 乘以 AD。第二小问，CE 的最小值等于 2 分之 5 倍根号 2。解题方法总结：第一，旋转全等用于证明垂直。第二，勾股定理用于求边长。第三，相似三角形用于建立关系。第四，二次函数用于求最值。
+Dialogue: 0,0:05:38.64,0:05:42.24,Default,,0,0,0,,在直角三角形 ABC 中，角 ACB 等于 90 度...
+Dialogue: 0,0:05:42.24,0:05:45.76,Default,,0,0,0,,第一问，要证明角 ABE 等于 90 度...
+Dialogue: 0,0:05:45.76,0:05:49.60,Default,,0,0,0,,证明：在三角形 ACD 和三角形 BED 中...
+Dialogue: 0,0:05:49.60,0:05:52.24,Default,,0,0,0,,第二问，当 D 为 AB 中点时...
+Dialogue: 0,0:05:52.24,0:05:54.72,Default,,0,0,0,,解：步骤一，求 AB 的长...
+Dialogue: 0,0:05:54.72,0:05:57.52,Default,,0,0,0,,第三问第一小问，求证 CE 的平方...
+Dialogue: 0,0:05:57.52,0:06:01.92,Default,,0,0,0,,证明：在直角三角形 CDE 中...
+Dialogue: 0,0:06:01.92,0:06:04.87,Default,,0,0,0,,第三问第二小问，求 CE 的最小值...
+Dialogue: 0,0:06:04.87,0:06:06.39,Default,,0,0,0,,答案汇总。第一问...

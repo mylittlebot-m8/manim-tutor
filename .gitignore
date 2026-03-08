@@ -1,0 +1,127 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+.venv/
+venv/
+ENV/
+env/
+env.bak/
+venv.bak/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Audio files (TTS generated)
+*.wav
+*.mp3
+*.m4a
+*.aac
+*.ogg
+*.flac
+audio/
+**/audio/
+**/*.wav
+**/*.mp3
+
+# Video files (Manim rendered)
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.webm
+*.flv
+video/
+**/video/
+media/
+**/media/
+**/*.mp4
+
+# Manim specific
+media/
+*.xdv
+*.pdf
+*.log
+*.aux
+*.out
+*.toc
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+*.orig
+
+# Logs
+*.log
+logs/
+
+# Test files
+test_output/
+test_results/
+*.test
+
+# Documentation build
+docs/_build/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# Large files
+*.zip
+*.tar
+*.tar.gz
+*.rar
+*.7z
+
+# Feishu/media downloads
+downloads/
+uploads/
+
+# OpenClaw specific
+.openclaw/
+*.openclaw
+
+# Environment and secrets
+.env
+.env.local
+.env.*.local
+*.env
+secrets/
+keys/
+*.key
+*.pem
+
+# Database files (may contain sensitive data)
+*.db
+*.sqlite
+*.sqlite3
